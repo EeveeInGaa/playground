@@ -7,7 +7,6 @@
   >
     <p>Hover for tooltip</p>
   </a>
-
   <span class="tooltip-text">Weiterleitung auf externe Seite!</span>
 </div>
 
@@ -75,3 +74,9 @@
     </g>
   </a>
 </svg>
+
+<div class="bordered-div" *ngFor="let todo of todos">
+  <p>{{ todo.id }}</p>
+  <p>{{ todo.title }}</p>
+  <p>{{ todo.completed }}</p>
+</div>

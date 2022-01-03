@@ -48,3 +48,15 @@ svg {
 .large-circle {
   fill: blue;
 }
+
+.bordered-div {
+  border: 1px solid black;
+  width: fit-content;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  p {
+    padding: 1rem;
+    margin: 0;
+  }
+}
