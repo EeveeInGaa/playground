@@ -49,6 +49,17 @@ svg {
   fill: blue;
 }
 
+.drag-drop {
+  border: 1px solid black;
+  width: fit-content;
+  display: flex;
+  gap: 1rem;
+  p {
+    padding: 1rem;
+    margin: 0;
+  }
+}
+
 .bordered-div {
   border: 1px solid black;
   width: fit-content;
