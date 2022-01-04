@@ -11,10 +11,10 @@ export class AppComponent {
   title = 'testing-playground';
 
   todos: Todo[] | any = [];
+  searchValue: string = '';
 
   constructor(private readonly todoService: TodosService) {
     this.todoService.getTodos().subscribe((data) => {
-      console.log(data);
       this.todos = data;
     });
   }

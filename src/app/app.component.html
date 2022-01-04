@@ -9,8 +9,9 @@
   </a>
   <span class="tooltip-text">Weiterleitung auf externe Seite!</span>
 </div>
+<br />
 
-<svg
+<!-- <svg
   width="100%"
   height="100%"
   viewBox="0 0 1182 1182"
@@ -73,9 +74,16 @@
       <circle cx="145.962" cy="235.439" r="49.788" />
     </g>
   </a>
-</svg>
+</svg> -->
 
-<div class="bordered-div" *ngFor="let todo of todos">
+<label for="search">Search/Filter</label>
+<input type="text" id="search" [(ngModel)]="searchValue" />
+<br />
+<br />
+<div
+  class="bordered-div"
+  *ngFor="let todo of todos | searchfilter: searchValue"
+>
   <p>{{ todo.id }}</p>
   <p>{{ todo.title }}</p>
   <p>{{ todo.completed }}</p>
