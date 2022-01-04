@@ -15,6 +15,7 @@ export class AppComponent {
   searchValue: string = '';
 
   numbers: number[] = [];
+  strings: string[] = ['hallo', 'hi', 'hey', 'hej', 'hola'];
 
   constructor(private readonly todoService: TodosService) {
     this.todoService.getTodos().subscribe((data) => {
@@ -25,7 +26,8 @@ export class AppComponent {
     }
   }
 
-  drop(event: CdkDragDrop<number[]>) {
+  drop(event: CdkDragDrop<number[] | string[]>) {
     moveItemInArray(this.numbers, event.previousIndex, event.currentIndex);
+    moveItemInArray(this.strings, event.previousIndex, event.currentIndex);
   }
 }

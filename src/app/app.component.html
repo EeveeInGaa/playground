@@ -5,7 +5,7 @@
     target="_blank"
     rel="noopener noreferrer"
   >
-    <p>Hover for tooltip</p>
+    <p class="tooltip-hover">Hover for tooltip</p>
   </a>
   <span class="tooltip-text">Weiterleitung auf externe Seite!</span>
 </div>
@@ -76,11 +76,19 @@
   </a>
 </svg> -->
 
-<div cdkDropList (cdkDropListDropped)="drop($event)"></div>
-<div cdkDrag class="drag-drop" *ngFor="let number of numbers">
-  <p>{{ number }}</p>
+<div cdkDropList (cdkDropListDropped)="drop($event)">
+  <div cdkDrag class="drag-drop" *ngFor="let number of numbers">
+    <p>{{ number }}</p>
+  </div>
 </div>
-
+<br />
+<div cdkDropList (cdkDropListDropped)="drop($event)">
+  <div cdkDrag class="drag-drop" *ngFor="let string of strings">
+    <p>{{ string }}</p>
+  </div>
+</div>
+<br />
+<br />
 <label for="search">Search/Filter</label>
 <input type="text" id="search" [(ngModel)]="searchValue" />
 <br />

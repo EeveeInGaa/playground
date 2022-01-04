@@ -29,6 +29,10 @@
   visibility: visible;
 }
 
+.tooltip-hover:hover {
+  cursor: help;
+}
+
 svg {
   width: 700px;
 }
@@ -54,7 +58,9 @@ svg {
   width: fit-content;
   display: flex;
   gap: 1rem;
+  cursor: move;
   p {
+    cursor: move;
     padding: 1rem;
     margin: 0;
   }
