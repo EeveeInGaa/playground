@@ -5,6 +5,7 @@
   <li>open new Page with a-tag</li>
   <li>Import and style own svg</li>
   <li>Drag and Drop</li>
+  <li>Custom Textarea</li>
   <li>Filter/Search for text</li>
   <li>Http Calls</li>
 </ul>
@@ -96,6 +97,15 @@
   <div cdkDrag class="drag-drop" *ngFor="let string of strings">
     <p>{{ string }}</p>
   </div>
+</div>
+<br />
+<br />
+<div class="textarea-wrapper">
+  <textarea
+    cols="6"
+    class="custom-styled-textarea"
+    placeholder="Write Something"
+  ></textarea>
 </div>
 <br />
 <br />
